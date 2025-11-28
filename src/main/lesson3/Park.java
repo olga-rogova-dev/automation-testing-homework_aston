@@ -1,4 +1,4 @@
-package lesson3;
+package src.main.lesson3;
 
 public class Park {
 

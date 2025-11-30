@@ -1,6 +1,6 @@
-package lesson2;
+package src.main.lesson2;
 
-import static lesson2.Homework.*;
+import static src.main.lesson2.Homework.*;
 
 public class Main {
     public static void main(String[] args) {

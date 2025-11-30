@@ -1,4 +1,4 @@
-package lesson2;
+package src.main.lesson2;
 
 public class Homework {
 
@@ -128,6 +128,5 @@ public class Homework {
         for (int value : arr) {
             System.out.print(value + " ");
         }
-        System.out.println(len);
     }
 }

@@ -23,6 +23,7 @@ public class FactorialCalculatorTest {
     @CsvSource({"0, 1", "1, 1", "5, 120"})
     void factorial_forSeveralValues_isCorrect(int n, long expected) {
         long result = calculator.calculateFactorial(n);
+
         assertEquals(expected, result);
     }
 
@@ -34,6 +35,7 @@ public class FactorialCalculatorTest {
                 IllegalArgumentException.class,
                 () -> calculator.calculateFactorial(n)
         );
+
         assertEquals("n должно быть >= 0", ex.getMessage());
     }
 }

@@ -21,6 +21,7 @@ public class NumberComparatorTest {
     @Test
     void compare_firstGreater_forIntegers() {
         String result = cmp.compare(5.0, 3.0);
+
         assertEquals("первое число больше второго", result);
     }
 
@@ -28,6 +29,7 @@ public class NumberComparatorTest {
     @Test
     void compare_firstLess_forIntegers() {
         String result = cmp.compare(3.0, 5.0);
+
         assertEquals("первое число меньше второго", result);
     }
 
@@ -35,6 +37,7 @@ public class NumberComparatorTest {
     @Test
     void compare_equal_forIntegers() {
         String result = cmp.compare(4.0, 4.0);
+
         assertEquals("числа равны", result);
     }
 

@@ -30,6 +30,7 @@ public class ArithmeticCalculatorTest {
     @Test
     void divide_validArguments_returnsQuotient() {
         double result = calc.divide(10, 3);
+
         assertEquals(3.3333333, result, 1e-6);
     }
 
@@ -37,6 +38,7 @@ public class ArithmeticCalculatorTest {
     @Test
     void divide_positiveResult_isGreaterThanZero() {
         double result = calc.divide(10, 3);
+
         assertTrue(result > 0);
     }
 

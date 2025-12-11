@@ -25,21 +25,23 @@ public class TriangleSquareCalculatorTest {
         assertEquals(6.0, area);
     }
 
-    @DisplayName("Ноль или отрицательное значение основания/высоты выбрасывает IllegalArgumentException с сообщением")
+    @DisplayName("Ноль основания/высоты выбрасывает IllegalArgumentException с сообщением")
     @Test
     void calculateSquare_zeroOrNegative_throwsExceptionWithMessage() {
         IllegalArgumentException ex1 = assertThrows(
                 IllegalArgumentException.class,
-                () -> calc.calculateSquare(0.0, 4.0)
-        );
+                () -> calc.calculateSquare(0.0, 4.0));
 
         assertEquals("Основание и высота должны быть > 0", ex1.getMessage());
+    }
 
-        IllegalArgumentException ex2 = assertThrows(
+    @DisplayName("Отрицательная высота выбрасывает IllegalArgumentException с сообщением")
+    @Test
+    void calculateSquare_negativeHeight_throwsExceptionWithMessage() {
+        IllegalArgumentException ex = assertThrows(
                 IllegalArgumentException.class,
-                () -> calc.calculateSquare(3.0, -1.0)
-        );
+                () -> calc.calculateSquare(3.0, -1.0));
 
-        assertEquals("Основание и высота должны быть > 0", ex2.getMessage());
+        assertEquals("Основание и высота должны быть > 0", ex.getMessage());
     }
 }
